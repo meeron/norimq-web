@@ -1,0 +1,30 @@
+{
+  "name": "norimq-web",
+  "version": "1.0.0",
+  "description": "Web interface for norimq server",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meeron/norimq-web.git"
+  },
+  "keywords": [
+    "norimq",
+    "react",
+    "node"
+  ],
+  "author": "Miron Jakubowski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/meeron/norimq-web/issues"
+  },
+  "homepage": "https://github.com/meeron/norimq-web#readme",
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-scripts": "1.0.14"
+  }
+}

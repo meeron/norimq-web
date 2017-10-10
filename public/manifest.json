@@ -1,0 +1,10 @@
+{
+  "short_name": "norimq web",
+  "name": "norimq web interface",
+  "icons": [
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
