@@ -1,26 +1,19 @@
-import React, { Component } from 'react';
-import { Container } from 'bloomer';
-import { Navbar, NavbarBrand, NavbarItem, NavbarMenu, NavbarStart } from 'bloomer';
+import React, { Component } from 'react'
+import { Container } from 'bloomer'
+import { BrowserRouter as Router } from 'react-router-dom'
+import NavHeader from './App/NavHeader'
+import Content from './App/Content'
 
 class App extends Component {
   render() {
     return (
-      <Container>
-        <Navbar style={{ margin: '0' }}>
-          <NavbarBrand>
-            <NavbarItem>
-              norimQ
-            </NavbarItem>            
-          </NavbarBrand>
-
-          <NavbarMenu isActive={true}>
-            <NavbarStart>
-              <NavbarItem href='#'>Home</NavbarItem>
-            </NavbarStart>
-          </NavbarMenu>
-        </Navbar>
-      </Container>
-    );
+      <Router>
+        <Container>
+          <NavHeader />
+          <Content />
+        </Container>
+      </Router>
+    )
   }
 }
 
