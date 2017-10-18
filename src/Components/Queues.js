@@ -1,15 +1,30 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { Container } from 'bloomer'
+import Api from '../Services/apiService'
 
 class Queues extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      queues: []
+    }
+  }
+
+  componentDidMount() {
+    Api.getQueues()
+      .then(data => this.setState({ queues: data }))
+      .catch(ex => console.error(ex));
+  }
+
   render() {
     return (
       <Container>
-        <p>Queues component</p>
         <ul>
-          <li><Link to={"/queues/1"}>Queue 1</Link></li>
-          <li><Link to={"/queues/2"}>Queue 2</Link></li>
+          {
+            this.state.queues.map(q =>
+              <li><Link to={"/queues/1"}>{q.name}</Link></li>)
+          }
         </ul>
       </Container>
     )
